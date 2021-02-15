@@ -1,0 +1,22 @@
+Package: cityhoods
+Type: Package
+Title: Easy comparisons of Finnish cities' local administrative districts
+Version: 0.1.0
+Authors@R: 
+    person(given = "Pyry",
+           family = "Kantanen",
+           role = c("aut", "cre"),
+           email = "pyry.kantanen@gmail.com")
+Description: Download and visualize data on administrative 
+    districts of the 6 biggest Finnish cities.
+License: MIT + file LICENSE
+URL: https://github.com/pitkant/cityhoods
+Depends:
+    R (>= 4.0.0)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Imports: 
+    sf,
+    httr,
+    ggplot2
