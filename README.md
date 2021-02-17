@@ -5,8 +5,10 @@ cityhoods
 
 ## Installation
 
+```
 devtools::install_github("pitkant/cityhoods")
 library(cityhoods)
+```
 
 ## Usage
 
