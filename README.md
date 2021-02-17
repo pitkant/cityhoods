@@ -3,8 +3,8 @@
 # cityhoods
 
 `cityhoods` is an R package for easy visualization of Finnish city
-administrative districts. These districts can be of varying sizes:
-wards, neighbourhoods, boroughs, quarters, et cetera.
+administrative districts in 6 biggest cities: Helsinki, Espoo, Vantaa,
+Tampere, Turku and Oulu.
 
 ## Installation
 
