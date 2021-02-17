@@ -19,4 +19,10 @@ RoxygenNote: 7.1.1
 Imports: 
     sf,
     httr,
-    ggplot2
+    ggplot2,
+    curl,
+    methods,
+    xml2,
+    dplyr,
+    tidyr,
+    janitor
