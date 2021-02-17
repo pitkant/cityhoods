@@ -4,7 +4,7 @@
 \alias{get_areas}
 \title{Get city administrative districs}
 \usage{
-get_areas(city = "turku", level = 1, draw = FALSE)
+get_areas(city = "turku", level = 1, draw = TRUE)
 }
 \arguments{
 \item{city}{The desired city. Options are Helsinki, Espoo, 
@@ -14,7 +14,7 @@ Vantaa, Turku, Tampere, Oulu}
 where 1 is the lowest level (= largest areas) and 3 is the highest level 
 (= smallest areas)}
 
-\item{draw}{Draw the map immediately? Default is FALSE}
+\item{draw}{Draw the map immediately? Default is TRUE}
 }
 \value{
 sf object

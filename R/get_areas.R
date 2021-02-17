@@ -7,19 +7,19 @@
 #' @param level The desired administrative level. Options are 1, 2 and 3,
 #' where 1 is the lowest level (= largest areas) and 3 is the highest level 
 #' (= smallest areas)
-#' @param draw Draw the map immediately? Default is FALSE
+#' @param draw Draw the map immediately? Default is TRUE
 #' 
 #' @import ggplot2
 #' @importFrom httr parse_url build_url
 #' @importFrom sf st_read read_sf
 #' 
 #' @usage 
-#' get_areas(city = "turku", level = 1, draw = FALSE)
+#' get_areas(city = "turku", level = 1, draw = TRUE)
 #' 
 #' @return sf object
 #' @export
 
-get_areas <- function(city="turku", level=1, draw = FALSE) {
+get_areas <- function(city="turku", level=1, draw = TRUE) {
   
   if (!(city %in% c("turku", "helsinki", "espoo", "vantaa", "tampere", "oulu"))) {
     stop("invalid city input")
