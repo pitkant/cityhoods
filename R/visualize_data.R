@@ -12,10 +12,10 @@
 #' @usage 
 #' visualize_data(city = "turku", level = 3, dataset = NULL)
 #' 
-#' @example 
-#' Not run: 
+#' @examples 
+#' \dontrun{
 #' visualize_data(city = "turku", level = 3, dataset = turku_vaesto_ika_2010_2019)
-#' End(Not run)
+#' }
 #' 
 #' @import sf
 #' @import ggplot2
@@ -41,6 +41,7 @@ visualize_data <- function(city="turku", level = 3, dataset = NULL) {
   viz_data <- janitor::clean_names(dataset)
   
   # Extremely hacky solution to choosing and filtering rows
+  # More general solution in upcoming versions
   filter_value <- NULL
   filter_value1 <- select.list(choices = unique(viz_data$vuosi), 
                                title = names(viz_data$Vuosi), 
@@ -51,7 +52,7 @@ visualize_data <- function(city="turku", level = 3, dataset = NULL) {
                                multiple = FALSE, 
                                graphics = FALSE)
   
-  viz_data <- filter(viz_data, viz_data$vuosi == filter_value1 & viz_data$ika == filter_value2)
+  viz_data <- suppressWarnings(filter(viz_data, viz_data$vuosi == filter_value1 & viz_data$ika == filter_value2))
   
   area_and_data <- dplyr::left_join(viz_area, viz_data, by = c("id" = "osa_alue"))
   

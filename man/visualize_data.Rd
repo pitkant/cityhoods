@@ -22,3 +22,9 @@ sf object
 \description{
 Visualize local level data on a choropleth map.
 }
+\examples{
+\dontrun{
+visualize_data(city = "turku", level = 3, dataset = turku_vaesto_ika_2010_2019)
+}
+
+}
